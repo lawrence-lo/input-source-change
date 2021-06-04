@@ -1,0 +1,183 @@
+{
+    "title": "F7/F8/F9 input source change",
+    "rules": [{
+        "description": "Press F7/F8/F9 to select English/Chinese/Japanese input source.",
+        "manipulators": [{
+            "type": "basic",
+            "from": {
+              "key_code": "f7"
+            },
+            "to": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "input_source_if",
+                    "input_sources": [
+                        {
+                            "input_mode_id": "com.apple.inputmethod.Japanese",
+                            "input_source_id": "com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese",
+                            "language": "ja"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "type": "basic",
+            "from": {
+              "key_code": "f7"
+            },
+            "to": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                },
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "input_source_if",
+                    "input_sources": [
+                        {
+                            "input_source_id": "org.openvanilla.inputmethod.OpenVanilla",
+                            "language": "zh-Hant"
+                        }
+                    ]
+                }
+            ]
+        },
+{
+            "type": "basic",
+            "from": {
+              "key_code": "f8"
+            },
+            "to": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "input_source_if",
+                    "input_sources": [
+                        {
+                            "input_source_id": "com.apple.keylayout.Canadian",
+                            "language": "en"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "type": "basic",
+            "from": {
+              "key_code": "f8"
+            },
+            "to": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                },
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "input_source_if",
+                    "input_sources": [
+                        {
+                            "input_mode_id": "com.apple.inputmethod.Japanese",
+                            "input_source_id": "com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese",
+                            "language": "ja"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "type": "basic",
+            "from": {
+              "key_code": "f9"
+            },
+            "to": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "input_source_if",
+                    "input_sources": [
+                        {
+                            "input_source_id": "org.openvanilla.inputmethod.OpenVanilla",
+                            "language": "zh-Hant"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "type": "basic",
+            "from": {
+              "key_code": "f9"
+            },
+            "to": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                },
+                {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                        "left_control",
+                        "left_option"
+                    ]
+                }
+            ],
+            "conditions": [
+                {
+                    "type": "input_source_if",
+                    "input_sources": [
+                        {
+                            "input_source_id": "com.apple.keylayout.Canadian",
+                            "language": "en"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+      }
+    ]
+  }
