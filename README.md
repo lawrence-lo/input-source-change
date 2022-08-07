@@ -3,9 +3,8 @@ A Karabiner-Elements configuration file that allows function keys (F7/F8/F9) to 
 
 # Background
 * Switching input sources among 3 languages (English/Chinese/Japanese in my case) using ^Space or ^⌥Space has been a pain as one would need to look at the input menu or menu bar to select and cycle through the input sources. 
-* Attempted to use `select_input_source` in Karabiner-Elements but it would sometimes fail on CJKV (Chinese, Japanese, Korean, Vietnamese) input sources due to an old unfixed macOS bug as mentioned in [Docs](https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/select-input-source/).
-* Kawa has a [workaround](https://github.com/hatashiro/kawa/pull/12) but it is still unreliable when I tried to implement it in Karabiner-Elements.
-* **input-source-change.json** avoids `select_input_source` and instead uses `input_source_if` to determine if ^⌥Space (default "Select next source in Input menu" shortcut) needs to be sent once or twice.
+* Using `select_input_source` directly in Karabiner-Elements would sometimes fail on CJKV (Chinese, Japanese, Korean, Vietnamese) input sources as `select_input_source` uses a deprecated macOS Carbon API that is not very reliable. The input icon changes but the actual input does not.
+* As a workaround this json configuration file selects the input source before the target input source using `select_input_source` and then sends a default macOS shortcut (^⌥Space) to go to the next(target) input source.
 
 # Installation
 * Change function keys to key f7, f8, f9 in Karabiner-Elements > Preference
